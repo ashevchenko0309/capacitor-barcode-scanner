@@ -56,6 +56,8 @@ public class BarcodeScanner extends Plugin implements BarcodeCallback {
                     // Configure the decoder
                     ArrayList<BarcodeFormat> formatList = new ArrayList<BarcodeFormat>();
                     formatList.add(BarcodeFormat.QR_CODE);
+                    formatList.add(BarcodeFormat.EAN_13);
+                    formatList.add(BarcodeFormat.CODE_128);
                     mBarcodeView.setDecoderFactory(new DefaultDecoderFactory(formatList));
 
                     // Configure the camera (front/back)
